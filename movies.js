@@ -45,4 +45,4 @@ var updateCallback = function(data){
     var chatText = "chatTranscript.lines";
     
     lpTag.agentSDK.init({});
-    lpTag.agentSDK.bind(chatText, updateCallback, notifyWhenDone);
+    lpTag.agentSDK.bind(chatText, updateCallback, notifyWhenDone); 
