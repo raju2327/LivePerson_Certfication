@@ -20,6 +20,9 @@ var updateCallback = function(data){
     document.getElementById("Year").innerHTML = res.Year;
     document.getElementById("Genre").innerHTML = res.Genre;
     document.getElementById("Plot").innerHTML = res.Plot;
+    document.getElementById("Director").innerHTML = res.Director;
+    document.getElementById("Poster").innerHTML = res.Poster;
+        
     
     
     
