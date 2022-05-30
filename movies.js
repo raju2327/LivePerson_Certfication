@@ -1,4 +1,4 @@
-var updateCall = function(data){
+var updateCallback = function(data){
     var value = data.newValue;
     console.log("value : "+value);
     var line = value[value.length -1];
@@ -30,7 +30,7 @@ var updateCall = function(data){
     
     
     
-    var notifyCall = function(error) {
+    var notifyWhenDone = function(error) {
     if (err){
     console.log("Error Occured in notification : "+err);
     }
@@ -41,5 +41,5 @@ var updateCall = function(data){
     var chatData = "chatData.lines";
     
     lpTag.agentSDK.init({});
-    lpTag.agentSDK.bind(chatData, updateCall, notifyCall);
+    lpTag.agentSDK.bind(chatData, updateCallback, notifyWhenDone);
 
