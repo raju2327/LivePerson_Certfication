@@ -1,12 +1,14 @@
 var updateCallback = function(data){
     var value = data.newValue;
+    console.log("after value ");
     console.log("value : "+value);
     var line = value[value.length -1];
     console.log("line : "+line);
     var movieName = line.text;
-	var key = "80a3537a";
-    if (line.source.toLowerCase()==="visitor"){
-    var url = "https://www.omdbapi.com?t="+movieName+"&apikey="+key;
+	if (line.source.toLowerCase()==="visitor"){
+    var url = https://www.omdbapi.com?t=+movieName+&apikey=80a3537a;
+    
+   
     
     fetch(url)
     .then(function(response){
@@ -18,12 +20,14 @@ var updateCallback = function(data){
     document.getElementById("Year").innerHTML = res.Year;
     document.getElementById("Genre").innerHTML = res.Genre;
     document.getElementById("Plot").innerHTML = res.Plot;
+	document.getElementById("Plot").innerHTML = res.Plot;
     document.getElementById("Director").innerHTML = res.Director;
     document.getElementById("Poster").innerHTML = res.Poster;
     
-       
+    
+    
     }).catch(function(error){
-    console.log("Error Message from OMDB API : "+error);
+    console.log("Error Message : "+error);
     })
     }
     };
@@ -32,14 +36,13 @@ var updateCallback = function(data){
     
     var notifyWhenDone = function(error) {
     if (err){
-    console.log("Error Occured in notification : "+err);
+    console.log("Error Occured in notify : "+err);
     }
     
-    errorMessage.innerHTML = "Unable to find the movie name you've entered...Please provide valid movie name";
+    errorMessage.innerHTML = "Unable to find the movie";
     };
     
-    var chatData = "chatData.lines";
+    var chatText = "chatTranscript.lines";
     
     lpTag.agentSDK.init({});
-    lpTag.agentSDK.bind(chatData, updateCallback, notifyWhenDone);
-
+    lpTag.agentSDK.bind(chatText, updateCallback, notifyWhenDone);
