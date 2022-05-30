@@ -6,7 +6,7 @@ var updateCallback = function(data){
     console.log("line : "+line);
     var movieName = line.text;
     if (line.source.toLowerCase()==="visitor"){
-    var url = "https://www.omdbapi.com?t="+movieName+"&apikey=53e45af4";
+    var url = "https://www.omdbapi.com?t="+movieName+"&apikey=80a3537a";
     
    
     
